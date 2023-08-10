@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="1684.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportMenuController">
+   <children>
+      <TableView fx:id="monthTypeTableView" layoutX="34.0" layoutY="170.0" prefHeight="200.0" prefWidth="333.0">
+        <columns>
+          <TableColumn fx:id="monthCol" prefWidth="75.0" text="Month" />
+          <TableColumn fx:id="typeCol" prefWidth="130.0" text="Type" />
+            <TableColumn fx:id="totalApptCol" prefWidth="130.0" text="Total Appointments" />
+        </columns>
+      </TableView>
+      <Label layoutX="67.0" layoutY="111.0" text="Total Number of Appointments">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TableView fx:id="reportByContactTableView" layoutX="417.0" layoutY="170.0" prefHeight="200.0" prefWidth="725.0">
+        <columns>
+          <TableColumn fx:id="reportApptIDCol" prefWidth="136.0" text="Appointment ID" />
+          <TableColumn fx:id="reportTitleCol" prefWidth="56.0" text="Title" />
+            <TableColumn fx:id="reportTypeCol" prefWidth="62.0" text="Type" />
+            <TableColumn fx:id="reportDescCol" prefWidth="96.0" text="Description" />
+            <TableColumn fx:id="reportStartCol" prefWidth="135.0" text="Start Date/Time" />
+            <TableColumn fx:id="reportEndCol" prefWidth="113.0" text="End Date/Time" />
+            <TableColumn fx:id="reportCustIDCol" prefWidth="126.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <Label layoutX="678.0" layoutY="111.0" text="Schedule by Contact">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TableView fx:id="countryCustomerTableView" layoutX="1201.0" layoutY="170.0" prefHeight="200.0" prefWidth="391.0">
+        <columns>
+          <TableColumn fx:id="countryDivTableCol" prefWidth="184.0" text="Division" />
+            <TableColumn fx:id="customerTotalTableCol" prefWidth="206.0" text="Total Customers" />
+        </columns>
+      </TableView>
+      <Label layoutX="1227.0" layoutY="111.0" text="Total Number of Customers By Location">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Button fx:id="reportMainMenuBtn" layoutX="708.0" layoutY="433.0" mnemonicParsing="false" onAction="#onActionReturntoMainMenu" text="Exit to Main Menu" />
+      <ComboBox fx:id="reportContactComboBox" layoutX="417.0" layoutY="370.0" onAction="#onActionFilterByContact" prefHeight="31.0" prefWidth="172.0" promptText="Choose Contact" />
+   </children>
+</AnchorPane>

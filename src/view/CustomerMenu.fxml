@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxWidth="950.0" minWidth="707.0" prefHeight="400.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerMenuController">
+    <children>
+        <AnchorPane layoutX="9.0" layoutY="60.0" prefHeight="273.0" prefWidth="742.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+            <children>
+                <TextField fx:id="customerSearchBox" layoutX="556.0" layoutY="22.0" onAction="#onActionSearchCustomer" prefHeight="25.0" prefWidth="173.0" promptText="Enter ID or Name" />
+                <TableView fx:id="customerTableView" layoutX="8.0" layoutY="47.0" prefHeight="179.0" prefWidth="722.0">
+                    <columns>
+                        <TableColumn fx:id="customerIdCol" prefWidth="75.0" text="Customer ID" />
+                        <TableColumn fx:id="customerNameCol" prefWidth="84.0" text="Name" />
+                        <TableColumn fx:id="customerAddressCol" prefWidth="103.0" text="Address" />
+                        <TableColumn fx:id="customerZipCol" prefWidth="97.0" text="Postal Code" />
+                        <TableColumn fx:id="customerPhoneCol" prefWidth="76.0" text="Phone" />
+                        <TableColumn fx:id="customerDivIDCol" prefWidth="85.0" text="Division ID" />
+                        <TableColumn fx:id="customerDivCol" prefWidth="112.0" text="Division" />
+                        <TableColumn fx:id="customerCountryCol" prefWidth="89.0" text="Country" />
+                    </columns>
+                </TableView>
+                <HBox layoutX="154.0" layoutY="214.0" prefHeight="50.0" prefWidth="244.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onActionAddCustomer" text="Add">
+                            <HBox.margin>
+                                <Insets left="20.0" right="5.0" top="20.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onActionUpdateCustomer" text="Update">
+                            <HBox.margin>
+                                <Insets left="20.0" right="5.0" top="20.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onActionDeleteCustomer" text="Delete">
+                            <HBox.margin>
+                                <Insets left="20.0" right="5.0" top="20.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <Label layoutX="283.0" layoutY="33.0" prefHeight="19.0" prefWidth="207.0" text="Customers">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button layoutX="386.0" layoutY="347.0" mnemonicParsing="false" onAction="#onActionExit" text="Exit to Main" />
+    </children>
+    <HBox.margin>
+        <Insets left="20.0" top="20.0" />
+    </HBox.margin>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="653.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointmentMenuController">
+   <children>
+      <HBox layoutY="14.0" prefHeight="91.0" prefWidth="283.0">
+         <children>
+            <Label text="Update Appointment">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="40.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="40.0" layoutY="105.0" prefHeight="561.0" prefWidth="479.0">
+         <children>
+            <GridPane prefHeight="440.0" prefWidth="479.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="156.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="106.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="103.0" text="Appointment ID" />
+                  <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="102.0" text="Title" textAlignment="RIGHT" GridPane.rowIndex="1" />
+                  <Label GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="100.0" text="Location" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="102.0" text="Type" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="101.0" text="Start Date/Time" GridPane.rowIndex="5" />
+                  <TextField fx:id="newApptIDTxt" disable="true" GridPane.columnIndex="1" />
+                  <TextField fx:id="newApptTitleTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="newApptDescTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="newApptLocTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="newApptTypeTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="101.0" text="Description" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="137.0" text="End Date/Time" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="117.0" text="Customer ID" GridPane.rowIndex="7" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="100.0" text="User ID" GridPane.rowIndex="8" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="112.0" text="Contact " GridPane.rowIndex="9" />
+                  <TextField fx:id="newApptCustIDTxt" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="newApptUserIDTxt" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <DatePicker fx:id="newStartDatePick" prefHeight="25.0" prefWidth="159.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <DatePicker fx:id="newEndDatePick" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="newStartTimeTxt" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="newEndTimeTxt" prefHeight="25.0" prefWidth="112.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <ComboBox fx:id="newContactComboBox" prefHeight="25.0" prefWidth="155.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+               </children>
+            </GridPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionSaveNewAppt" text="Save">
+                     <HBox.margin>
+                        <Insets left="200.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionReturnToApptMenu" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

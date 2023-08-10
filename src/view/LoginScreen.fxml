@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="297.0" prefWidth="371.0" style="-fx-background-color: #eeedcd;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginScreenController">
+   <children>
+      <Pane layoutX="19.0" layoutY="43.0" prefHeight="228.0" prefWidth="342.0">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="loginUsernameLbl" text="Username:" textFill="#20c5b8">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="loginPasswordlbl" text="Password:" textFill="#20c5b8" GridPane.rowIndex="1" />
+                  <TextField fx:id="userNameEntryTxt" GridPane.columnIndex="1" />
+                  <PasswordField fx:id="passwordEntryTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="loginBtn" layoutX="54.0" layoutY="141.0" mnemonicParsing="false" onAction="#onActionLogin" text="Login" />
+            <Button fx:id="loginExitBtn" layoutX="174.0" layoutY="141.0" mnemonicParsing="false" onAction="#onActionExitProgram" text="Exit" />
+            <Label fx:id="localeLbl" layoutY="174.0" text="Locale" textFill="#20c5b8" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
